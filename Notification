@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+class Notification{
+    private:
+         int notificationId;
+         int fromID;
+         int toID;
+         string notificationDate;
+         string notificationTime;
+         string notificationReason;
+         string notificationContent;
+    public:
+        void setNotificationDetails(int noid,int forid,int toid,string nodate,string notime,string noreason,string nocontent);
+        void getNotificationDetails();
+        
+};
+void Notification::setNotificationDetails(int noid,int forid,int toid,string nodate,string notime,string noreason,string nocontent)
+{
+         notificationId = noid;
+         fromID = forid;
+         toID = toid;
+         notificationDate = nodate;
+         notificationTime = notime;
+         notificationReason = noreason;
+         notificationContent = nocontent;
+}
+void Notification::getNotificationDetails()
+{
+  cout <<"NotificationId :"<<notificationId<<endl;
+  cout <<"FromID :"<<fromID<<endl;
+  cout <<"ToID :"<<toID<<endl;
+  cout <<"NotificationDate :"<<notificationDate<<endl;
+  cout <<"NotificationTime :"<<notificationTime<<endl;
+  cout <<"NotificationReason :"<<notificationReason<<endl;
+  cout <<"NotificationContent :"<<notificationContent<<endl;
+  cout <<endl;
+  
+}
+
+int main()
+{
+  Notification n1;
+  n1.setNotificationDetails(001,213,333,"5/5/2022","4.00pm","login","Login Successfully");
+  n1.getNotificationDetails();
+  
+  cout << "\n" << endl;
+  cout << "..............................................................." << endl;
+  
+  Notification n2;
+  n2.setNotificationDetails(002,313,444,"6/6/2022","2.00pm","register","Register Successfully");
+  n2.getNotificationDetails();
+  
+  cout << "\n" << endl;
+  cout << "..............................................................." << endl;
+  
+  return 0;
+  
+}
